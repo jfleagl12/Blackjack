@@ -35,7 +35,17 @@ while sum(player_cards) < 21:
 	else:
 		print("The dealer has a total of " + str(sum(dealer_cards)) + " with ", dealer_cards)
 		print("You have a total of " + str(sum(player_cards)) + " with ", player_cards)
+		if sum(dealer_cards) > sum(player_cards):
+			print("Dealer wins!")
+		else: 
+			print("You win!")
+			break 
 
+if sum(player_cards) > 21:
+	print("You BUSTED Dealer wins.")
+elif sum(player_cards) == 21:
+	print("You have BLACKJACK! You win! 21!")
+	
 # Compare the sums of the cards between D v P
 # If P card sum is greater than 21 = bust
 # If P card sum is less than 21 = Option Hit or Stay
